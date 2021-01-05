@@ -1,21 +1,21 @@
 import React from 'react'
-import { Platform, Text, View } from 'react-native'
-
-import ViewImageScreen from './app/screens/ViewImageScreen'
-import WelcomeScreen from './app/screens/WelcomeScreen'
-import AppText from './app/components/AppText'
-import AppButton from './app/components/AppButton'
+import { View } from 'react-native'
+import Card from './app/components/Card'
 
 export default function App() {
 	return (
 		<View
 			style={{
-				flex: 1,
-				justifyContent: 'center',
-				alignItems: 'center',
+				backgroundColor: '#f8f4f4',
+				padding: 20,
+				paddingTop: 100,
 			}}
 		>
-			<AppButton title='Login' onPress={() => console.log('Tapped')} />
+			<Card
+				title='Red jacket for sale'
+				subTitle='Ksh.1000'
+				image={require('./app/assets/jacket.jpg')}
+			/>
 		</View>
 	)
 }
