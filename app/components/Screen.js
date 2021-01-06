@@ -2,10 +2,10 @@ import React from 'react'
 import Constants from 'expo-constants'
 import { SafeAreaView, StyleSheet, View } from 'react-native'
 
-export default function Screen({ children }) {
+export default function Screen({ children, style }) {
 	return (
-		<SafeAreaView style={styles.screen}>
-			<View>{children}</View>
+		<SafeAreaView style={[styles.screen, style]}>
+			<View style={style}>{children}</View>
 		</SafeAreaView>
 	)
 }

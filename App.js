@@ -1,6 +1,13 @@
 import React from 'react'
-import MessagesScreen from './app/screens/MessagesScreen'
+import AppPicker from './app/components/AppPicker'
+import AppTextInput from './app/components/AppTextInput'
+import Screen from './app/components/Screen'
 
 export default function App() {
-	return <MessagesScreen />
+	return (
+		<Screen>
+			<AppPicker icon='apps' placeholder='Category' />
+			<AppTextInput icon='email' placeholder='Email' />
+		</Screen>
+	)
 }
